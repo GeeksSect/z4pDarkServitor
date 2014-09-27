@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="MazeLTop.js"></script>
+	<script type="text/javascript">
+		$(document).ready( function() {
+			console.log('Good news for everyone!');
+
+			$('#start').click(function(){
+				var rows = 15;
+				var cols = 15;
+				
+				var a = Generate(rows, cols);
+				var s = "";
+				for(var i = 0; i < rows; i++) {
+					s += "<tr>";
+					for(var j = 0; j < cols; j++) {
+						s += "<td class='" + (a[i][j] == 0 ? "road" : "wall") + "'>&nbsp</td>";
+					}
+					s += "</tr>";
+				}
+				
+				$('#lab').html( s );
+			});
+		} );
+	</script>
+	<style>
+	.wall {
+		background-color: #333;
+	}
+	
+	.path {
+		background-color: #eee;
+	}
+	
+	td {
+		width: 20px;
+		height: 20px;
+	}
+	</style>
+    <title>Labyrinth</title>
+</head>
+
+<body>
+    <div align="center">
+        <table id="lab" border="0" collspacing="0" collpadding="0"></table>
+		<br>
+		<button id="start">Generate</button>
+    </div>
+</body>
+</html>

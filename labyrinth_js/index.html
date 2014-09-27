@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="Eiler_maze.js"></script>
+	<script type="text/javascript">
+		$(document).ready( function() {
+			console.log('Good news for everyone!');
+
+			$('#start').click(function(){
+				var rows = 20;
+				var cols = 20;
+				
+				$('#lab').html( lab2text(Generate(rows, cols), rows, cols) );
+			});
+		} );
+	</script>
+	<style>
+	#lab {
+		text-align: left;
+		font-size: 14pt;
+		font-family: monospace;
+		background-color: #ffd;
+		color: #333;
+		border: 0px solid #333;
+	}
+	</style>
+    <title>Labyrinth</title>
+</head>
+
+<body>
+    <div align="center">
+        <pre id="lab">
+		</pre>
+		<br>
+		<a href="#" id="start">Generate</a>
+    </div>
+</body>
+</html>
