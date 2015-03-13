@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Translator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/interpreter.js"></script>
+    <style>
+        td {min-width: 40px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span4" style="text-align:center;">
+                <table class="table table-bordered">
+                <thead>
+                    <th>AX</th>
+                    <th>BS</th>
+                    <th>SS</th>
+                    <th>IP</th>
+                </thead>
+                <tr>
+                    <td id="regA">&nbsp;</td>
+                    <td id="regBS">&nbsp;</td>
+                    <td id="regT">&nbsp;</td>
+                    <td id="regI">&nbsp;</td>
+                </tr>
+                </table>
+            </div>
+            <div class="span8">
+                <p>
+                    <button id="btnReload" class="btn btn-primary" onclick="reload();">Reload</button>
+                    <button id="btnStep" class="btn btn-primary" onclick="run();">Step</button>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2">
+                <textarea id="codes" class="span2" rows="20"></textarea>
+            </div>
+            <div class="span10">
+                <table id="memory" class="table table-bordered"></table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Compiler</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/compiler.js"></script>
+    <style>
+        td {min-width: 40px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <p style="text-align:center;">
+                    <button id="btnCompile" class="btn btn-primary" onclick="compile();">Compile</button>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <textarea id="source" class="span6" rows="20">
+10 rem determine and print the larger of two ints
+20 input s
+30 input t
+40 if s >= t goto 70
+50 print t
+60 goto 99
+70 print s
+99 end
+            </textarea>
+            <textarea id="codes" class="span6" rows="20"></textarea>
+        </div>
+    </div>
+</body>
+</html>
